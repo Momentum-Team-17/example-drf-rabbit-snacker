@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>These Rabbits Right Here</h1>
+{% for rabbit in rabbits %}
+<p>{{ rabbit }}</p>
+{% endfor %}
+{% endblock %}

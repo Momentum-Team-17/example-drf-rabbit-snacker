@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from snacks import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.list_rabbits_html, name="home"),
+    path('api/rabbits', views.list_rabbits_json, name='api-rabbit-list'),
 ]
