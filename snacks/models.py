@@ -9,7 +9,7 @@ class User(AbstractUser):
 
 class Rabbit(models.Model):
     name = models.CharField(max_length=200)
-    foods = models.ManyToManyField(to='Food', related_name='foods')
+    foods = models.ManyToManyField(to='Food', related_name='foods', blank=True)
     owner = models.ForeignKey(
         to='User', on_delete=models.CASCADE, related_name='rabbits')
 
