@@ -30,7 +30,7 @@ env = environ.Env(
 
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 SECRET_KEY = env('SECRET_KEY')
 
