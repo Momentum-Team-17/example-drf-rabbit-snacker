@@ -49,6 +49,8 @@ if env("RENDER"):
 
 INSTALLED_APPS = [
     'django_extensions',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,6 +59,7 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'snacks',
 ]
 
@@ -168,3 +171,6 @@ if env("RENDER"):
     DJANGO_SUPERUSER_PASSWORD = env(
         "DJANGO_SUPERUSER_PASSWORD")  # add this too
     DJANGO_SUPERUSER_EMAIL = env("DJANGO_SUPERUSER_EMAIL")  # and also this
+
+# django-cors-headers allow all origins
+CORS_ALLOW_ALL_ORIGINS = True

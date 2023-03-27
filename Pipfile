@@ -11,6 +11,7 @@ django-extensions = "*"
 djangorestframework = "*"
 whitenoise = "*"
 gunicorn = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
