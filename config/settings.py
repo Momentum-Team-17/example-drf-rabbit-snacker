@@ -57,7 +57,9 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
+    'djoser',
     'snacks',
 ]
 
@@ -174,3 +176,10 @@ if env("RENDER"):
 
 # django-cors-headers allow all origins
 CORS_ALLOW_ALL_ORIGINS = True
+
+# rest_framework setting for token auth with djoser
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': {
+        'rest_framework.authentication.TokenAuthentication',
+    }
+}
